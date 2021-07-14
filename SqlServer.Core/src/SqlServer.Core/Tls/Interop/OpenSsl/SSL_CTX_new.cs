@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SqlServer.Core.Tls.Interop
+{
+    internal static partial class OpenSsl
+    {
+        [DllImport(Libraries.LibSsl, CallingConvention = CallingConvention.Cdecl)]
+        public static extern SSL_CTX SSL_CTX_new(SSL_METHOD method);
+    }
+}
